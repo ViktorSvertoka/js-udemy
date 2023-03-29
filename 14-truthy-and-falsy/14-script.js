@@ -1,5 +1,7 @@
-// JavaScript falsy values:
-0, '', undefined, null, NaN;
+//* JavaScript falsy values:
+
+//? 0, '', undefined, null, NaN;
+
 console.log(Boolean(0));
 console.log(Boolean(''));
 console.log(Boolean(undefined));
