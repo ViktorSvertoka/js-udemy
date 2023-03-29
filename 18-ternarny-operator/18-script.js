@@ -27,4 +27,6 @@ const isAdult = 18;
 const canYouBayAlcohol =
   isAdult <= age ? 'You can buy alcohol.' : 'You can not buy alcohol.';
 
+console.log(canYouBayAlcohol);
+
 alert(canYouBayAlcohol);
