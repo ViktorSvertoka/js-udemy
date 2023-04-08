@@ -2,6 +2,8 @@
 
 ## Преподаватель YouRa Allakhverdov - Mobile & Web Developer
 
+### Наиболее новый и полный курс по JavaScript с нуля простым и понятным для новичков языком + React Fundamentals
+
 -- Master of Computer Applications (M.C.A.), Software Engineering | Kharkiv
 Polytechnic University 2001-2006
 
