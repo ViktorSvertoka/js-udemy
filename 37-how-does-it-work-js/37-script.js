@@ -40,7 +40,7 @@ getAge(1974);
 printAge();
 
 // Hoisting
-
+ 
 // Variables
 console.log(firstName);
 console.log(job);
@@ -127,7 +127,7 @@ user188.getAge();
 const f = user187.getAge;
 f();
 
-Regular VS Arrow Functions
+// Regular VS Arrow Functions
 
 var firstName = 'Jack';
 
@@ -180,7 +180,7 @@ var arrSum = (a, b) => {
 
 arrSum(7, 11, 23);
 
-Primitives VS Reference Types
+// Primitives VS Reference Types
 
 let a = 1;
 let b = a;
