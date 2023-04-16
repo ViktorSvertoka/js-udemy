@@ -46,6 +46,7 @@ const game = {
 };
 
 // 1. Create separate arrays with players for each team (variables players1 and players2).
+
 const players1 = [...game.players[0]];
 console.log(players1);
 
@@ -59,5 +60,59 @@ console.log(players2);
 const goalkeeper = players1[0];
 console.log(goalkeeper);
 
-const fieldPlayers = [...players1];
+let fieldPlayers = [...players1];
+fieldPlayers.shift(0);
 console.log(fieldPlayers);
+
+// 3. Create an array allPlayers containing all players from both teams (22 players).
+
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+// 4. REAL MADRID(team1) used 5 substitute players during the game.
+// Create a new array(players1Total) containing all original players
+// of team1 as well as ‘Marcelo’, 'Isco', 'Asensio', ‘Diaz' and 'Odriozola'.
+
+const players1Total = [
+  ...players1,
+  'Marcelo',
+  'Isco',
+  'Asensio',
+  'Diaz',
+  'Odriozola',
+];
+
+console.log(players1Total);
+
+// 5. Based on the game.odds object, create one variable for each odd (called team1, draw and team2).
+
+const chance1 = game.odds.team1;
+console.log(chance1);
+
+const chance2 = game.odds.draw;
+console.log(chance2);
+
+const chance3 = game.odds.team2;
+console.log(chance3);
+
+// 6. A write function printGoals that takes an arbitrary number of player names(NOT an array)
+// and prints each one to the console along with the total number of goals
+// scored(the number of player names passed to the function).
+
+function printGoals(...players) {
+  console.log(`${players.length} goals were scored in the game.`);
+  players.forEach(player => console.log(player));
+}
+
+printGoals(...game.scored);
+
+// 7. The team with the lower odds will win more likely.
+// Print to the console which team is more likely to win,
+// WITHOUT using an if / else or ternary operator.
+
+const {
+  odds: { team1, team2 },
+} = game;
+const likelyWinner = (team1 < team2 && game.team1) || game.team2;
+
+console.log(`${likelyWinner} is more likely to win the game`);
