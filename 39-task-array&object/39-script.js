@@ -47,22 +47,28 @@ const game = {
 
 // 1. Create separate arrays with players for each team (variables players1 and players2).
 
-const players1 = [...game.players[0]];
-console.log(players1);
+const [players1, players2] = game.players;
+console.log(players1, players2);
 
-const players2 = [...game.players[1]];
-console.log(players2);
+// const players1 = [...game.players[0]];
+// console.table(players1);
+
+// const players2 = [...game.players[1]];
+// console.table(players2);
 
 // 2. The first player in each of these arrays is the goalkeeper and the rest are the field players.
 // For REAL MADRID(team1) create one variable(goalkeeper) with the name of the goalkeeper
 // and one array(fieldPlayers) with all the remaining 10 field players.
 
-const goalkeeper = players1[0];
-console.log(goalkeeper);
+const [goalkeeper, ...fieldPlayers] = players1;
+console.log(goalkeeper, fieldPlayers);
 
-let fieldPlayers = [...players1];
-fieldPlayers.shift(0);
-console.log(fieldPlayers);
+// const goalkeeper = players1[0];
+// console.log(goalkeeper);
+
+// let fieldPlayers = [...players1];
+// fieldPlayers.shift(0);
+// console.log(fieldPlayers);
 
 // 3. Create an array allPlayers containing all players from both teams (22 players).
 
@@ -86,14 +92,19 @@ console.log(players1Total);
 
 // 5. Based on the game.odds object, create one variable for each odd (called team1, draw and team2).
 
-const chance1 = game.odds.team1;
-console.log(chance1);
+// const {
+//   odds: { team1, draw, team2 },
+// } = game;
+// console.log(team1, draw, team2);
 
-const chance2 = game.odds.draw;
-console.log(chance2);
+// const chance1 = game.odds.team1;
+// console.log(chance1);
 
-const chance3 = game.odds.team2;
-console.log(chance3);
+// const chance2 = game.odds.draw;
+// console.log(chance2);
+
+// const chance3 = game.odds.team2;
+// console.log(chance3);
 
 // 6. A write function printGoals that takes an arbitrary number of player names(NOT an array)
 // and prints each one to the console along with the total number of goals
